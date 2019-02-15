@@ -1,3 +1,6 @@
+[![](https://images.microbadger.com/badges/image/aanatoly/pip-cache.svg)](https://microbadger.com/images/aanatoly/pip-cache "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/aanatoly/pip-cache.svg)](https://microbadger.com/images/aanatoly/pip-cache "Get your own version badge on microbadger.com")
+
 # docker-pip-cache
 This image runs `devpi` server serving as a caching proxy to the main index.
 
