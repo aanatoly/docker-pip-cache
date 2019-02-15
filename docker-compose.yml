@@ -5,8 +5,6 @@ services:
     image: ${IMAGE_REPO}:${IMAGE_TAG}
     build:
       context: .
-      args:
-        APT_CACHE: ${APT_CACHE}
 
       labels:
         Vendor: "LiveU"
