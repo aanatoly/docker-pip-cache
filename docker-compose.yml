@@ -1,0 +1,13 @@
+version: '3.2'
+
+services:
+  ubuntu:
+    image: ${IMAGE_REPO}:${IMAGE_TAG}
+    build:
+      context: .
+      args:
+        APT_CACHE: ${APT_CACHE}
+
+      labels:
+        Vendor: "LiveU"
+        Commit: ${CI_COMMIT_DESC}

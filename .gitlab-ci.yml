@@ -1,0 +1,26 @@
+stages:
+  - build
+  - push
+
+before_script:
+  - make init
+
+.action: &action
+  script:
+    - make $CI_JOB_NAME
+  tags:
+    - ubuntu-16.04
+    - kote6
+
+.build_action: &build_action
+  stage: build
+  <<: *action
+
+.push_action: &push_action
+  stage: push
+  when: manual
+  <<: *action
+
+build_MNPR: *build_action
+push_MNPR: *push_action
+push_MN: *push_action
