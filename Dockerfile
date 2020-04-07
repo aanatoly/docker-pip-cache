@@ -3,11 +3,11 @@ FROM alpine:latest
 RUN apk add --update --no-cache bash ca-certificates python3 \
     && python3 -m ensurepip \
     && rm -r /usr/lib/python*/ensurepip \
-    && pip3 install --no-cache-dir --upgrade pip setuptools \
+    && pip3 install --no-cache-dir --upgrade pip setuptools wheel \
     && update-ca-certificates
 
-RUN apk add --no-cache --virtual .build-deps gcc python3-dev libffi-dev musl-dev \
-    && pip install --no-cache-dir \
+RUN apk add --no-cache --virtual .build-deps gcc python3-dev libffi-dev musl-dev
+RUN pip install --no-cache-dir \
         devpi-server \
         devpi-web \
         devpi-client \
