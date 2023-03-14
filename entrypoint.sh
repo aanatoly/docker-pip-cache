@@ -22,7 +22,7 @@ echo $PWD
 args="--restrict-modify root --host 0.0.0.0 --port 3141 --serverdir ${DEVPI_SERVERDIR}"
 if [ ! -f  $DEVPI_SERVERDIR/.serverversion ]; then
     echo "[RUN]: Initialise devpi-server"
-    devpi-server $args --init
+    devpi-init $args
 fi
 
 echo "[RUN]: Launching devpi-server"
